@@ -127,7 +127,6 @@ public class TechJobs {
         }
 
         for (HashMap<String, String> job : someJobs) {
-//            System.out.println();
             System.out.println("\n*****");
             System.out.println("position type: " + job.get("position type"));
             System.out.println("name: " + job.get("name"));

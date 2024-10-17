@@ -98,22 +98,18 @@ public class JobData {
         ArrayList<HashMap<String, String>> foundJobs = new ArrayList<>();
         for (HashMap<String, String> job : allJobs) {
 
-//            boolean containsValue = job.values().stream().anyMatch(field -> field != null && field.toLowerCase().contains(value.toLowerCase()));
+
             boolean containsValue = false;
             for (String field : job.values()) {
                 if (field != null && field.toLowerCase().contains(value.toLowerCase())) {
                     containsValue = true;
-                    break; // Exit loop early if a match is found
+                    break;
                 }
             }
-
-
             if (containsValue && !foundJobs.contains(job)) {
                     foundJobs.add(job);
                 }
-
         }
-
         return foundJobs;
     }
 
